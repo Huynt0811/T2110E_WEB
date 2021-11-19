@@ -1,3 +1,3 @@
 <?php
-    include("./Ass1/home.html");
+    include("home.html");
 ?>
