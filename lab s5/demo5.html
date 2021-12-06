@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        var x;
+        // number
+        // array
+        // object
+        // object
+        // function
+        x = 10; // x là 1 number
+        x = x + 5; // x = 15
+        console.log(x);
+        var y = "xin chào các bạn";
+        console.log(y);
+        x = x + y; // cơ chế ghép chuỗi 15xin chào các bạn
+        console.log(x);
+        /*
+            number + number = number
+            number + string = string
+            string + string = string
+        */
+        console.log("Gia tri cua x=" + x);
+        var arr = []; //k cần nói rõ kiểu dữ liệu và kích thước
+        arr[0] = 1;
+        arr[1] = "xin chào";
+        arr[2] = [];
+        arr[2] = 1;
+        arr[0] = 1;
+        var ary = [3, 12, 9, 90, 1, 0, 15, 29];
+        console.log("Mảng trc khi sắp xếp: " + ary);
+        for (let i = 0; i - 1 < ary.length; i++) {
+            for (let j = 0; j < ary.length; j++) {
+                if (ary[i] < ary[j]) {
+                    var tmp;
+                    tmp = ary[i];
+                    ary[i] = ary[j];
+                    ary[j] = tmp;
+                }
+            }
+        }
+        console.log("Mảng sau khi sắp xếp: " + ary);
+        prompt("what"); // return string
+        confirm("what"); // return true false
+    </script>
+    <script src="./demo5.js"></script>
+</body>
+
+</html>
