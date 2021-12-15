@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button" onclick="ON()" class="">On</button>
+    <button type="button" onclick="OFF()" class="">Off</button>
+    <button type="button" onclick="TOG()" class="">TOG</button>
+
+    <h1 id="tit" class="x1 x2">Demo jQuery</h1>
+    <p id="para" class="x1">Nguyễn Thế Huy</p>
+
+
+
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+    // Làm thế nào để tạo ra đối tượng jQuery để sử dụng
+    var obj = $("#tit"); // 1 đối tượng đại diện cho 1 tập hợp (mảng)
+    var obj2 = $(".x1");    // 1 đối tượng đại diện cho 1 tập hợp (mảng)
+    // object collection
+    // thao tác với đối tượng này thì cả tập hợp bị ảnh hưởng giống nhau
+    // cũng có thể thao tác trên từng phần tử được
+
+    // một số hàm hay dùng
+    obj.css("color","red");
+    obj2.css(
+        {
+            color:"green",
+            "background-color":"orange"
+        }
+    );
+    obj.html("<p>Xin chào đây là nội dung trong thẻ p</p>");
+    obj.append("<i>Helo world!</i>");//thêm đằng trc
+    obj.prepend("<i>Helo world!</i>");// thêm đằng sau
+
+    obj.addClass("x3");
+    obj.removeClass("x2");
+    if (obj.hasClass("x3")){
+        obj.addClass("x4");
+    }
+    var para = $("#para");
+    function ON(){// bật
+        // para.show();
+        // para.fadeIn(500);
+        para.slideDown();
+    }
+    function OFF(){// tắt
+        // para.hide();
+        // para.fadeOut(500);
+        para.slideUp();
+    }
+    function TOG(){// tắt bật
+        // para.toggle();
+        para.fadeToggle();
+    }
+</script>
+</body>
+</html>

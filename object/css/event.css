@@ -1,0 +1,14 @@
+.box{
+    width: 200px;
+    height: 100px;
+    margin: 150px;
+    border: 1px solid rebeccapurple;
+    background: aliceblue;
+    display: flex;
+    justify-content: center;
+
+}
+button{
+    margin: 10%;
+    height: 50%;
+}
