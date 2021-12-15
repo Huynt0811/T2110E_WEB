@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/event.css"/>
+</head>
+<body>
+    <div class="box">
+<!--        <button type="button" onclick="clicklisten()">Click me</button>-->
+        <button type="button" onmouseenter="hoverMe()" onmouseleave="outMe()">Click me</button>
+    </div>
+    <form onclick="submitMe()" action="#" method="post">
+        <input id="ud1" onkeypress="writeMe()" type="text" name="x-name" placeholder="Enter here...">
+        <input id="ud" onkeydown="keDownMe(this)" onkeyup="keUpMe(this)" type="text" name="x-name" placeholder="Key down here...">
+        <input id="ud2" oncopy="alert('copy')" onkeydown="keDownMe(this)" onkeyup="keUpMe(this)" type="text" name="x-name" placeholder="Key down here...">
+        <input type="submit" value="Submit">
+    </form>
+    <script type="text/javascript">
+        var u = document.getElementById("ud");
+        var u1 = document.getElementById("ud1");
+        function submitMe(){
+            alert("Submit me");
+        }
+        function clicklisten(){
+            alert("Bạn vừa click tui hả?");
+        }
+        function hoverMe(){
+            console.log("Mouse entered me....");
+        }
+        function outMe(){
+            console.log("Mouse entered me....");
+        }
+        function writeMe(){
+            console.log("Write me..."+u1.value);
+        }
+        function keDownMe(){ // phát ra sự kiên khi nhấn phím xuống
+            console.log("Ke down me...."+u.value);
+        }
+        function keUpMe(){ // phát ra sự kiên khi nhấn phím xuống
+            console.log("Ke Up me...."+u.value);
+        }
+    </script>
+</body>
+</html>

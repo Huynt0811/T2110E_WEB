@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // OOP - lập trình hướng đối tượng
+        // typesript
+        // 1 đạng dữ liệu
+        // đối tượng
+        // có 2 thứ: 1. Thông tin (dữ liệu) --> thuộc tính
+        // 2. Phương thức (hành vi) -> trong code: nhìn như 1 function
+        var obj = {};
+        obj.name = "Lê Hữu Phước";
+        obj.tel = "0987654321";
+        obj.girlFriends = ["Vẫn Anh","Hiền","Tú"];
+        obj.run = function (){
+            alert("Phước xin chào các bạn");
+        }
+        console.log(obj.name);
+        obj.run();
+        // hoặc có thể tạo đối tượng như sau
+        var obj2 = {
+            name:"Bùi Như lạc",
+            tel:"0123456789",
+            girlFriends:[],
+            run:function (){
+                alert( this.name+ " xin chào các bạn!");
+                alert("Tôi có "+this.girlFriends.length+"Bạn gái");
+            },
+            activity: function (){
+                this.run();
+                alert("Hello word!");
+            }
+        }
+        obj2.run();
+        obj2.name = "Đỗ Duy Anh";
+        obj2.run();
+        obj2.girlFriends.push("Tú Anh")
+        var obj3 = Object.create(obj2); // Nhân bảng đối tượng giống obj2
+        obj3.name = "Mai Huy Hoạt";
+        obj3.run();
+
+    </script>
+</body>
+</html>

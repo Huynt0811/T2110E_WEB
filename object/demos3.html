@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="tit" class="x1 x2">Hello</h1>
+    <h2 id="coutdown">10</h2>
+    <script type="text/javascript">
+        setTimeout(function (){
+            var h1obj = document.getElementById("tit");
+            h1obj.style.color="red";
+
+            h1obj.innerText = "Chính sách an ninh của hà nội";
+
+            h1obj.innerHTML = "<i>Chính sách an ninh của hà nội<i>";
+
+            h1obj.classList.add("x3");
+
+            h1obj.classList.remove("x2");
+
+            if(h1obj.classList.contains("x4")){
+                h1obj.classList.remove("x4");
+            }else {
+                h1obj.classList.add("x4");
+            }
+        },1000);
+        var nun =10;
+        setInterval(function (){
+            var cd = document.getElementById("coutdown");
+            cd.innerHTML=nun;
+            nun--;
+        },1000)
+
+        var hh2 = document.getElementsByTagName("h2"); // array (collection) các đối tượng
+        for(var i=0;i<hh2.length;i++){
+            hh2[i].style.color = "red";
+        }
+
+        var x1s = document.getElementsByClassName("x1");// array(collection) các object
+        for(var i=0;i<x1s.length;i++){
+            x1s[i].style.backgroundColor = "green";
+        }
+
+        var x2ss = document.querySelectorAll("h1.x2");// collection các object //gọi ra giống gọi trong css
+        for(var i=0;i<x2ss.length;i++){
+            x2ss[i].style.fontStyle = "40";
+        }
+    </script>
+</body>
+</html>
